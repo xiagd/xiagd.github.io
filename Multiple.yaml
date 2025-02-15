@@ -114,7 +114,7 @@ proxy-providers:
  
   provider7:
     type: http
-    url: "https://ghp.ci/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml"
+    url: "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml"
     #path: ./provider1.yaml
     #更新间隔单位是秒
     interval: 3600
