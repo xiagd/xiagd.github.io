@@ -24,7 +24,7 @@ proxy-providers:
   # provider1名称可改
   provider1:
     type: http
-    url: "https://f87fy.no-mad-world.club/link/FmZxKlhlUTApEeNc?clash=3&extend=1"
+    url: "????"
     #path: ./provider1.yaml
     #更新间隔单位是秒
     interval: 3600
