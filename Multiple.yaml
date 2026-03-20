@@ -24,7 +24,7 @@ proxy-providers:
   # provider1名称可改
   provider1:
     type: http
-    url: "????"
+    url: "https://raw.githubusercontent.com/shaoyouvip/free/main/mihomo.yaml"
     #path: ./provider1.yaml
     #更新间隔单位是秒
     interval: 3600
