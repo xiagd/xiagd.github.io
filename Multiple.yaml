@@ -14,135 +14,426 @@ dns:
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   nameserver:
+    - 114.114.114.114
     - 223.5.5.5
+    
   fake-ip-filter:
     - '*.lan'
     - '*.localdomain'
     - '*.localhost'
     - '*.local'
+    #
+    - "connect.rom.miui.com"
+    - "+.miwifi.com"
+    - "+.ntp.org"
+    - "+.u-tools.cn"
+    - "+.mediatek.com"
+    - "+.cfprefer1.xyz"
+    - "+.wetab.link"
+    - "+.tyasaka.xyz"
+    # QQ
+    - "localhost.ptlogin2.qq.com"
+    - "localhost.sec.qq.com"
+    # WeChat
+    - "localhost.work.weixin.qq.com"
+    - "+.weixin.qq.com"
+    - "+.wechat.com"
+    # Windows
+    - "time.windows.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "+.wpsmail.net"
+    - "+.henzanapp.com"
+    - "+.pconline.com.cn"
+    
+    
+    
 proxy-providers:
-  # provider1名称可改
-  provider1:
-    type: http
-    url: "https://raw.githubusercontent.com/shaoyouvip/free/main/mihomo.yaml"
-    #path: ./provider1.yaml
+  # 名称可改        
+#============================================================================= 
+  Quick11:
+    type: http  
+    url:  https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/quick/1/config.yaml
+    path: ./Quick1.yaml
     #更新间隔单位是秒
-    interval: 3600
+    interval: 3600 # 1小时更新
     #是否用代理更新
-    proxy: DIRECT
+    #proxy: DIRECT
+    proxy: 负载均衡
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "Q11 |"
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-      timeout: 3000
-      lazy: true
- 
-  provider2:
-    type: http
-    url: "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml"
-    #path: ./provider1.yaml
-    #更新间隔单位是秒
-    interval: 3600
-    #是否用代理更新
-    proxy: DIRECT
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-      timeout: 3000
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
       lazy: true 
-      
-  provider3:
-    type: http
-    url: "https://raw.githubusercontent.com/anaer/Sub/refs/heads/main/clash.yaml"
-    #path: ./provider1.yaml
+
+  Quick12:
+    type: http 
+    url:  https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/quick/1/config.yaml
+    path: ./Quick1.yaml
     #更新间隔单位是秒
-    interval: 3600
+    interval: 3600 # 1小时更新
     #是否用代理更新
     proxy: DIRECT
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "Q12 |"
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-      timeout: 3000
-      lazy: true 
- 
-  provider4:
-    type: http
-    url: "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
-    #path: ./provider1.yaml
-    #更新间隔单位是秒
-    interval: 3600
-    #是否用代理更新
-    proxy: DIRECT
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-      timeout: 3000
-      lazy: true
- 
-  provider5:
-    type: http
-    url: "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml"
-    #path: ./provider1.yaml
-    #更新间隔单位是秒
-    interval: 3600
-    #是否用代理更新
-    proxy: DIRECT
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-      timeout: 3000
-      lazy: true
- 
-  provider6:
-    type: http
-    url: "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
-    #path: ./provider1.yaml
-    #更新间隔单位是秒
-    interval: 3600
-    #是否用代理更新
-    proxy: DIRECT
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-      timeout: 3000
-      lazy: true
- 
-  provider7:
-    type: http
-    url: "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml"
-    #path: ./provider1.yaml
-    #更新间隔单位是秒
-    interval: 3600
-    #是否用代理更新
-    proxy: DIRECT
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-      timeout: 3000
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
       lazy: true
 
-  provider8:
-    type: http
-    url: "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml"
-    #path: ./provider1.yaml
+  Quick21:
+    type: http  
+    url:  https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/quick/2/config.yaml
+    path: ./Quick2.yaml
     #更新间隔单位是秒
-    interval: 3600
+    interval: 3600 # 1小时更新
     #是否用代理更新
-    proxy: DIRECT
+    #proxy: DIRECT
+    proxy: 负载均衡
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "Q21 |"
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-      timeout: 3000
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true 
+
+  Quick22:
+    type: http 
+    url:  https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/quick/2/config.yaml
+    path: ./Quick2.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    proxy: DIRECT
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "Q22 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+      
+  Quick31:
+    type: http  
+    url:  https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/quick/3/config.yaml
+    path: ./Quick3.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    #proxy: DIRECT
+    proxy: 负载均衡
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "Q31 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true 
+
+  Quick32:
+    type: http 
+    url:  https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/quick/3/config.yaml
+    path: ./Quick3.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    proxy: DIRECT
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "Q32 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+
+  Quick41:
+    type: http  
+    url:  https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/quick/4/config.yaml
+    path: ./Quick4.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    #proxy: DIRECT
+    proxy: 负载均衡
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "Q41 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true 
+
+  Quick42:
+    type: http 
+    url:  https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/quick/4/config.yaml
+    path: ./Quick4.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    proxy: DIRECT
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "Q42 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true  
+      
+      
+#============================================================================= 
+  Go11:
+    type: http  
+    url:  https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml
+    path: ./Go1.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    #proxy: DIRECT
+    proxy: 负载均衡
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G11 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+      
+      
+  Go12:
+    type: http  
+    url:  https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml
+    path: ./Go1.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    proxy: DIRECT
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G12 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+      
+  Go21:
+    type: http  
+    url:  https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml
+    path: ./Go2.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    #proxy: DIRECT
+    proxy: 负载均衡
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G21 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+      
+  Go22:
+    type: http  
+    url:  https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml
+    path: ./Go2.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    proxy: DIRECT
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G22 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true   
+      
+          
+  Go31:
+    type: http  
+    url:  https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml
+    path: ./Go3.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    #proxy: DIRECT
+    proxy: 负载均衡
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G31 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+      
+      
+  Go32:
+    type: http  
+    url:  https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml
+    path: ./Go3.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    proxy: DIRECT
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G32 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+
+
+  Go41:
+    type: http  
+    url:  https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml
+    path: ./Go4.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    #proxy: DIRECT
+    proxy: 负载均衡
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G41 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+      
+      
+  Go42:
+    type: http  
+    url:  https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml
+    path: ./Go4.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    proxy: DIRECT
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G42 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+      
+      
+  Go51:
+    type: http  
+    url:  https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml
+    path: ./Go5.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    #proxy: DIRECT
+    proxy: 负载均衡
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G51 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+      
+      
+  Go52:
+    type: http  
+    url:  https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml
+    path: ./Go5.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    proxy: DIRECT
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G52 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+      
+  Go61:
+    type: http  
+    url:  https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml
+    path: ./Go6.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    #proxy: DIRECT
+    proxy: 负载均衡
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G61 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
+      lazy: true
+      
+      
+  Go62:
+    type: http  
+    url:  https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml
+    path: ./Go6.yaml
+    #更新间隔单位是秒
+    interval: 3600 # 1小时更新
+    #是否用代理更新
+    proxy: DIRECT
+    # 节点名称前缀 p1
+    override: 
+      additional-prefix: "G62 |"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800  #30分钟
+      timeout: 3000  #xxx ms
       lazy: true
 
       
+         
+  
 #自建节点配置位置
 #proxies:
 #- name: "ss1"
@@ -153,46 +444,268 @@ proxy-providers:
 #  udp: true
 #  password: "密码"
 
+# 定义统一的节点提供者变量 (使用锚点)
+x-quick-providers: &quick-providers
+    - Quick11
+    - Quick12
+    - Quick21
+    - Quick22
+    - Quick31
+    - Quick32
+    - Quick41
+    - Quick42
+    
+x-go-providers: &go-providers
+    - Go11
+    - Go12
+    - Go21
+    - Go22
+    - Go31
+    - Go32
+    - Go41
+    - Go42
+    - Go51
+    - Go52
+    - Go61
+    - Go62
+
+x-qg-providers: &qg-providers
+    - Quick11
+    - Quick12
+    - Quick21
+    - Quick22
+    - Quick31
+    - Quick32
+    - Quick41
+    - Quick42
+    - Go11
+    - Go12
+    - Go21
+    - Go22
+    - Go31
+    - Go32
+    - Go41
+    - Go42
+    - Go51
+    - Go52
+    - Go61
+    - Go62
+    
+
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
-  - 自动选择
-  - 手动选择
+  - 负载均衡_Quick
+  - 自动选择_Quick
+  - 手动选择_Quick
+  - 负载均衡_Go  
+  - 自动选择_Go 
+  - 手动选择_Go
+  - 负载均衡_QuickGo
+  - 自动选择_QuickGo
+  - 手动选择_QuickGo
   - DIRECT
-
-- name: 自动选择
-  type: url-test
-  url: https://www.google.com/generate_204
-  interval: 300
+  
+ #=======================================
+- name: 负载均衡_Quick
+  type: load-balance             # 必须指定类型
+  url: https://www.gstatic.com/generate_204  # 节点测试地址
+  interval: 300                  # 节点延迟测试间隔（单位：秒）
+  #strategy: round-robin          # 负载策略（轮询）
+  strategy: consistent-hashing      # 负载策略（一致性哈希，相同目标IP/域名固定使用同一节点）
+  timeout:  2000   #xxx ms
   tolerance: 100
+  max-failed-times: 3             # 连续失败3次标记节点不可用
+  health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 180          # *s检查高优先级组是否恢复
+     tolerance: 100
+     timeout:  2000   # 超时2秒视为不可用
+     max-failed-times: 3             # 连续失败3次标记节点不可用
+     lazy: true             # true :检测当前被策略组使用的节点,  false:检测所有节点
   proxies:
   #- ss1自建节点
   #- vm+ws自建节点
-  use:
-    - provider1
-    - provider2
-    - provider3
-    - provider4
-    - provider5
-    - provider6
-    - provider7
-    - provider8
-
-- name: 手动选择
-  type: select
+  use: *quick-providers # 使用统一的节点变量 (使用别名)
+   
+#=======================================
+- name: 自动选择_Quick
+  type: url-test 
+  url: http://www.gstatic.com/generate_204
+  interval: 300   #秒
+  tolerance: 50    #控制切换灵敏度ms
+  timeout:  2000 
+  lazy: true 
+  health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 120          # x秒检查高优先级组是否恢复
+     tolerance: 50
+     timeout:  2000   # 超时x秒视为不可用
+     #expected-status: 204
+     max-failed-times: 3             # 连续失败3次标记节点不可用
+     lazy: true             # true :检测当前被策略组使用的节点,  false:检测所有节点
   proxies:
   #- ss1自建节点
+  #- vm+ws自建节点
+  use: *quick-providers # 使用统一的节点变量 (使用别名)
 
-  use:
-    - provider1
-    - provider2
-    - provider3
-    - provider4
-    - provider5
-    - provider6
-    - provider7
-    - provider8
+
+#=======================================  
+- name: 手动选择_Quick
+  type: select
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  timeout:  2000 
+  tolerance: 50
+  lazy: true 
+  health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 100          # 300s检查高优先级组是否恢复
+     tolerance: 200
+     timeout:  2000   # 超时xxx ms视为不可用
+     lazy: true             # true :检测当前被策略组使用的节点,  false:检测所有节点
+  #proxies:
+  #- ss1自建节点
+  #- vm+ws自建节点
+  use: *quick-providers # 使用统一的节点变量 (使用别名)  
+
+ #=======================================
+- name: 负载均衡_Go
+  type: load-balance             # 必须指定类型
+  url: https://www.gstatic.com/generate_204  # 节点测试地址
+  interval: 300                  # 节点延迟测试间隔（单位：秒）
+  #strategy: round-robin          # 负载策略（轮询）
+  strategy: consistent-hashing      # 负载策略（一致性哈希，相同目标IP/域名固定使用同一节点）
+  timeout:  2000   #xxx ms
+  tolerance: 100
+  max-failed-times: 3             # 连续失败3次标记节点不可用
+  health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 180          # *s检查高优先级组是否恢复
+     tolerance: 100
+     timeout:  2000   # 超时2秒视为不可用
+     max-failed-times: 3             # 连续失败3次标记节点不可用
+     lazy: true             # true :检测当前被策略组使用的节点,  false:检测所有节点
+  proxies:
+  #- ss1自建节点
+  #- vm+ws自建节点
+  use: *go-providers # 使用统一的节点变量 (使用别名)
+   
+#=======================================
+- name: 自动选择_Go
+  type: url-test 
+  url: http://www.gstatic.com/generate_204
+  interval: 300   #秒
+  tolerance: 50    #控制切换灵敏度ms
+  timeout:  2000 
+  lazy: true 
+  health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 120          # x秒检查高优先级组是否恢复
+     tolerance: 50
+     timeout:  2000   # 超时x秒视为不可用
+     #expected-status: 204
+     max-failed-times: 3             # 连续失败3次标记节点不可用
+     lazy: true             # true :检测当前被策略组使用的节点,  false:检测所有节点
+  proxies:
+  #- ss1自建节点
+  #- vm+ws自建节点
+  use: *go-providers # 使用统一的节点变量 (使用别名)
+
+
+#=======================================  
+- name: 手动选择_Go
+  type: select
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  timeout:  2000 
+  tolerance: 50
+  lazy: true 
+  health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 100          # 300s检查高优先级组是否恢复
+     tolerance: 200
+     timeout:  2000   # 超时xxx ms视为不可用
+     lazy: true             # true :检测当前被策略组使用的节点,  false:检测所有节点
+  #proxies:
+  #- ss1自建节点
+  #- vm+ws自建节点
+  use: *go-providers # 使用统一的节点变量 (使用别名)
+  
+   
+ #=======================================
+- name: 负载均衡_QuickGo
+  type: load-balance             # 必须指定类型
+  url: https://www.gstatic.com/generate_204  # 节点测试地址
+  interval: 300                  # 节点延迟测试间隔（单位：秒）
+  #strategy: round-robin          # 负载策略（轮询）
+  strategy: consistent-hashing      # 负载策略（一致性哈希，相同目标IP/域名固定使用同一节点）
+  timeout:  2000   #xxx ms
+  tolerance: 100
+  max-failed-times: 3             # 连续失败3次标记节点不可用
+  health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 180          # *s检查高优先级组是否恢复
+     tolerance: 100
+     timeout:  2000   # 超时2秒视为不可用
+     max-failed-times: 3             # 连续失败3次标记节点不可用
+     lazy: true             # true :检测当前被策略组使用的节点,  false:检测所有节点
+  proxies:
+  #- ss1自建节点
+  #- vm+ws自建节点
+  use: *qg-providers # 使用统一的节点变量 (使用别名)
+   
+#=======================================
+- name: 自动选择_QuickGo
+  type: url-test 
+  url: http://www.gstatic.com/generate_204
+  interval: 300   #秒
+  tolerance: 50    #控制切换灵敏度ms
+  timeout:  2000 
+  lazy: true 
+  health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 120          # x秒检查高优先级组是否恢复
+     tolerance: 50
+     timeout:  2000   # 超时x秒视为不可用
+     #expected-status: 204
+     max-failed-times: 3             # 连续失败3次标记节点不可用
+     lazy: true             # true :检测当前被策略组使用的节点,  false:检测所有节点
+  proxies:
+  #- ss1自建节点
+  #- vm+ws自建节点
+  use: *qg-providers # 使用统一的节点变量 (使用别名)
+
+
+#=======================================  
+- name: 手动选择_QuickGo
+  type: select
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  timeout:  2000 
+  tolerance: 50
+  lazy: true 
+  health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 100          # 300s检查高优先级组是否恢复
+     tolerance: 200
+     timeout:  2000   # 超时xxx ms视为不可用
+     lazy: true             # true :检测当前被策略组使用的节点,  false:检测所有节点
+  #proxies:
+  #- ss1自建节点
+  #- vm+ws自建节点
+  use: *qg-providers # 使用统一的节点变量 (使用别名) 
+
   
 rule-providers:
   reject:
@@ -286,6 +799,7 @@ rule-providers:
     path: ./ruleset/applications.yaml
     interval: 86400
 rules:
+  - DOMAIN-KEYWORD,zaobao,DIRECT #联合早报
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
